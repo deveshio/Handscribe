@@ -3,7 +3,7 @@ import CanvasBoard from "./components/CanvasBoard";
 import RecognizedOutput from "./components/RecognizedOutput";
 import { useHandwritingBoard } from "./hooks/useHandwritingBoard";
 import { CANVAS_CONFIG } from "./constants/appConstants";
-
+import SidebarFooter from "./components/Controls/SideBarFooter.jsx";
 
 // Import the wake-up utility function and the new status sidebar
 import { startWakeUpSequence } from './utils/serverwakeup.jsx';
@@ -96,8 +96,8 @@ export default function App() {
             tool={tool} setTool={setTool}
             penSize={penSize} setPenSize={setPenSize}
           />
+        <SidebarFooter />
         </aside>
-
         <main className="flex-1 flex flex-col lg:flex-row p-4 lg:p-8 gap-8 overflow-y-auto">
           <div className="w-full lg:w-7/12 flex flex-col items-center gap-4">
             <CanvasBoard
