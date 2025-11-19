@@ -7,7 +7,7 @@ import SidebarFooter from "./components/Controls/SideBarFooter.jsx";
 
 // Import the wake-up utility function and the new status sidebar
 import { startWakeUpSequence } from './utils/serverwakeup.jsx';
-import ServerStatusSidebar from "./components/ServerStatusSidebar.jsx";
+import ServerStatusSidebar from "./components/serverStatusSidebar.jsx";
 
 // Import sub-components
 import ActionButtons from "./components/Controls/ActionButtons";
