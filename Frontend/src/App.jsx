@@ -3,7 +3,7 @@ import CanvasBoard from "./components/CanvasBoard";
 import RecognizedOutput from "./components/RecognizedOutput";
 import { useHandwritingBoard } from "./hooks/useHandwritingBoard";
 import { CANVAS_CONFIG } from "./constants/appConstants";
-import "./App.css";
+
 
 // Import the wake-up utility function and the new status sidebar
 import { startWakeUpSequence } from './utils/serverwakeup.jsx';
@@ -46,7 +46,7 @@ export default function App() {
     startWakeUpSequence(handleStatusChange);
   }, []);
 
-  // --- Stabilize the event handlers with useCallback ---
+
   const onLineChangeCallback = useCallback((prevLine) => {
     handleLineChange(prevLine, guidelines, 10);
   }, [handleLineChange, guidelines]);
@@ -70,15 +70,15 @@ export default function App() {
 
   return (
     <div className="outer min-h-screen w-full flex flex-col text-gray-800 ">
-      <header className="flex items-center p-4 bg-white shadow-md z-20">
+      <header className="flex items-center p-4 bg-[#e1d5d6] shadow-md z-20">
         <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-2 rounded-md hover:bg-gray-200 transition-colors" title="Toggle Settings">
           <MenuIcon />
         </button>
-        <h1 className="text-2xl font-bold ml-4">Hand Scribe</h1>
+        <h1 className="text-2xl font-bold ml-4"> <span className="text-[#d52c42]">Hand</span>Scribe</h1>
       </header>
       
       <div className="flex flex-1 overflow-hidden">
-        <aside className={`absolute lg:relative flex-shrink-0 w-72 bg-white shadow-lg lg:shadow-none p-4 flex flex-col gap-4 overflow-y-auto transition-transform duration-300 ease-in-out z-10 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+        <aside className={`absolute lg:relative flex-shrink-0 w-72 bg-[#e1d5d6] shadow-lg lg:shadow-none p-4 flex flex-col gap-4 overflow-y-auto transition-transform duration-300 ease-in-out z-10 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
           <h2 className="text-xl font-semibold border-b pb-2">Settings</h2>
           <CanvasSettings
             size={size} setSize={setSize}

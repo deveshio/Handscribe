@@ -15,7 +15,7 @@ export default function RecognizedOutput({ lineResults, totalLines }) {
   });
   
   return (
-    <div className="w-full p-4 border rounded-lg bg-white min-h-[100px]">
+    <div className="w-full p-4 border rounded-lg bg-[#e1d5d6] min-h-[100px]">
       <h3 className="font-bold text-lg mb-2">Recognized Text</h3>
       <div className="text-gray-800 whitespace-pre-wrap font-sans">
         {sortedLines.map((text, index) => (

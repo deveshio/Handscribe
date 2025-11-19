@@ -1,9 +1,9 @@
 // src/constants/appConstants.jsx
 
 export const CANVAS_CONFIG = {
-  DEFAULT_SIZE: 512,
+  DEFAULT_SIZE: 768,
   DEFAULT_LINE_WIDTH: 3,
-  DEFAULT_GUIDELINES: 5,
+  DEFAULT_GUIDELINES: 7,
 };
 
 export const API_CONFIG = {

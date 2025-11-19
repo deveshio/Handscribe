@@ -67,7 +67,7 @@ export default function ServerStatusSidebar({ serverStatuses }) {
   return (
     // --- YEH LINE BADAL DI HAI ---
     // Ab 'right-4' isey hamesha right side mein rakhega
-    <div className={`fixed bottom-4 right-4 w-72 bg-white border rounded-lg shadow-xl p-4 transition-opacity duration-500 ${allDone ? 'opacity-0' : 'opacity-100'}`}>
+    <div className={`fixed bottom-4 right-4 w-72 bg-[#1d1a32] border rounded-lg shadow-xl p-4 transition-opacity duration-500 ${allDone ? 'opacity-0' : 'opacity-100'}`}>
       <h3 className="text-lg font-semibold border-b pb-2 mb-2 text-gray-900">Server Status</h3>
       <ul className="space-y-2">
         {Object.entries(serverStatuses).map(([name, status]) => (

@@ -1,7 +1,7 @@
 // --- Configuration ---
 const URLS_TO_WAKE_UP = [
-  { name: "Backend API", url: "https://handscribe-backend.onrender.com" },
-  { name: "Model API", url: "https://handscribe.onrender.com" }
+  { name: "Backend API", url: import.meta.env.VITE_API_API_URL },
+  { name: "Model API", url:  import.meta.env.VITE_API_API_URL }
 ];
 const MAX_RETRIES = 12;      // Max number of times to try (12 retries * 5s = 60s max wait)
 const RETRY_INTERVAL = 5000; // 5 seconds (in milliseconds)
