@@ -70,11 +70,16 @@ export default function App() {
 
   return (
     <div className="outer min-h-screen w-full flex flex-col text-gray-800 ">
+      
       <header className="flex items-center p-4 bg-[#e1d5d6] shadow-md z-20">
         <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-2 rounded-md hover:bg-gray-200 transition-colors" title="Toggle Settings">
           <MenuIcon />
         </button>
-        <h1 className="text-2xl font-bold ml-4"> <span className="text-[#d52c42]">Hand</span>Scribe</h1>
+        <h1>
+
+        <h1 className="text-3xl font-bold ml-4"> <span className="text-[#d52c42]">Hand</span>Scribe</h1>
+        <p className=" px-10 text-sm text-[#0d0f2e] text-right  "> Handwritten to digital text</p>
+        </h1>
       </header>
       
       <div className="flex flex-1 overflow-hidden">

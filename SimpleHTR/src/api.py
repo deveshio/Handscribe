@@ -5,9 +5,20 @@ import uuid
 import shutil
 import subprocess
 from fastapi import FastAPI, File, UploadFile
+# 1. IMPORT THIS
+from fastapi.middleware.cors import CORSMiddleware
 
 # --- Initialize the FastAPI app ---
 app = FastAPI(title="Hand Scribe API")
+
+# 2. ADD THIS BLOCK HERE
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # This says: "Allow EVERYONE to talk to me"
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def read_root():
